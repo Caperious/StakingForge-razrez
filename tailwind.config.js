@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./src/sections/**/*.{html,jsx,tsx}",
-    "./src/components/**/*.{html,jsx,tsx}",
-    "./index.html",
-  ],
+  content: ["./src/**/**/*.{html,jsx,tsx}", "./index.html"],
   darkMode: "class",
   theme: {
     fontFamily: {

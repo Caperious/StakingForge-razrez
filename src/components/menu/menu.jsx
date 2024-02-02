@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { ThemeContext } from "../../theme"
 
 export const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,6 +15,10 @@ export const Menu = () => {
     {
       link: "/pricing",
       name: "Pricing",
+    },
+    {
+      link: "/newsroom",
+      name: "Newsroom",
     },
     {
       link: "/about-us",
@@ -32,7 +37,7 @@ export const Menu = () => {
         </div>
         {isMenuOpen && <MobileMenu links={links} />}
       </div>
-      <div className={"hidden md:block"}>
+      <div className={"hidden sm:block"}>
         <DesktopMenu links={links} />
       </div>
     </div>
@@ -62,18 +67,46 @@ const MobileMenu = ({ links }) => {
 }
 
 const DesktopMenu = ({ links }) => {
-  return <AccountLinks />
-}
-
-const ThemeToggle = () => {}
-
-const AccountLinks = () => {
   return (
     <div
       className={
-        "flex flex-row gap-x-8 align-baseline justify-center items-center font-bold"
+        "flex flex-row xl:gap-x-8 gap-x-4 align-baseline justify-center items-center font-bold"
       }
     >
+      {links.map((link) => {
+        return (
+          <a
+            key={link.link}
+            href={link.link}
+            className={"hidden lg:inline-block"}
+          >
+            {link.name}
+          </a>
+        )
+      })}
+      <ThemeToggle />
+      <AccountLinks />
+    </div>
+  )
+}
+
+const ThemeToggle = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext)
+  return (
+    <div className={"flex-row gap-x-2 hidden lg:flex cursor-pointer z-10"}>
+      <button onClick={() => toggleTheme("light")}>
+        <img src={"/light.svg"} />
+      </button>
+      <button onClick={() => toggleTheme("dark")}>
+        <img src={"/dark.svg"} />
+      </button>
+    </div>
+  )
+}
+
+const AccountLinks = () => {
+  return (
+    <>
       <a href={"/sign-in"}>Sign in</a>
       <a
         className={"border-2 rounded-full border-neutral-900 px-6 py-2"}
@@ -81,6 +114,6 @@ const AccountLinks = () => {
       >
         Sign up
       </a>
-    </div>
+    </>
   )
 }

@@ -20,7 +20,7 @@ export const NewsSection = () => {
     },
   ]
   return (
-    <div className={"bg-neutral-100 py-6"}>
+    <div className={"py-6"}>
       <div className={" flex flex-col mx-8 "}>
         <h2 className={"text-center my-16 sm:text-4xl sm:mt-24"}>
           {" "}
@@ -32,7 +32,7 @@ export const NewsSection = () => {
           })}
         </div>
       </div>
-      <div className={"flex justify-center my-6 sm:mt-12"}>
+      <div className={"flex justify-center my-6 sm:my-12 xl:mb-32"}>
         <Button label={"Show more"} />
       </div>
     </div>
@@ -45,10 +45,10 @@ const NewsCard = ({ news }) => {
       <div className={"my-8 sm:flex flex-row gap-x-6"}>
         <div
           className={
-            "bg-neutral-300 rounded-2xl h-48 w-full mt-8 mb-10 sm:mt-0"
+            "bg-neutral-300 rounded-2xl h-48 w-full mt-8 mb-10 sm:mt-0 xl:max-w-sm"
           }
         ></div>
-        <div className={"sm:max-w-sm"}>
+        <div className={"sm:max-w-sm md:max-w-full"}>
           <div className={"font-bold font-termina my-2 sm:text-xl"}>
             {news.title}
           </div>

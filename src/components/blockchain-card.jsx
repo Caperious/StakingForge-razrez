@@ -2,7 +2,7 @@ export const BlockchainCard = ({ blockchain = {} }) => {
   return (
     <>
       <div
-        className={`flex flex-row sm:flex-col px-4 py-4 justify-start gap-x-2 ${blockchain.card} sm:max-w-60`}
+        className={`flex flex-row sm:flex-col px-4 py-4 justify-start gap-x-2 ${blockchain.card} `}
       >
         {/*Image*/}
         <div className={"flex flex-col justify-center sm:items-center"}>

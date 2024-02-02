@@ -71,7 +71,11 @@ export const BlockchainsSection = () => {
         <BlockchainFilters />
       </div>
 
-      <div className={"grid grid-cols-1 sm:grid-cols-3 gap-3"}>
+      <div
+        className={
+          "grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-3 xl:gap-5"
+        }
+      >
         {blockchains.map((blockchain) => (
           <BlockchainCard blockchain={blockchain} />
         ))}
@@ -83,7 +87,7 @@ export const BlockchainsSection = () => {
         ))}
       </div>
 
-      <div className={"flex flex-row justify-center my-10"}>
+      <div className={"flex flex-row justify-center my-10 lg:my-20"}>
         <div className={"flex flex-col gap-y-5 items-center text-sm"}>
           <p>
             Showing <b>1-25</b> of <b>91 total</b>

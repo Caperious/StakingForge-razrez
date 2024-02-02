@@ -39,9 +39,11 @@ export const FeaturesSection = () => {
   ]
 
   return (
-    <div className={"flex flex-col mx-6 justify-center my-16 text-center"}>
+    <div
+      className={"flex flex-col mx-6 justify-center my-16 xl:my-32 text-center"}
+    >
       <h2>StackingForge features</h2>
-      <div className={"grid grid-cols-2 gap-y-14 mt-16"}>
+      <div className={"grid grid-cols-2 xl:grid-cols-3 gap-y-14 mt-16"}>
         {features.map((feature, index) => (
           <Feaure key={index} feature={feature} />
         ))}
