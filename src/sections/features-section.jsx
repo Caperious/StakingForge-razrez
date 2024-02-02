@@ -6,12 +6,12 @@ export const FeaturesSection = () => {
       description:
         "Setup in minutes and earn attractive rewards directly to your wallet when you host on StakingForge. ",
     },
-    {
-      title: "Sentry Nodes",
-      icon: "/feature-2.svg",
-      description:
-        "Secure your Validator node. Requesting data is unavailable. Carries no reward.",
-    },
+    // {
+    //   title: "Sentry Nodes",
+    //   icon: "/feature-2.svg",
+    //   description:
+    //     "Secure your Validator node. Requesting data is unavailable. Carries no reward.",
+    // },
     {
       title: "Full Nodes",
       icon: "/feature-3.svg",
@@ -24,18 +24,18 @@ export const FeaturesSection = () => {
       description:
         "Collect interest on assets available on our site while keeping your coin in your wallet.",
     },
-    {
-      title: "Address monitoring",
-      icon: "/feature-5.svg",
-      description:
-        "Monitor your masternode and staking rewards of any address from the available list of coins on our site.",
-    },
-    {
-      title: "Allnodes Bot",
-      icon: "/feature-6.svg",
-      description:
-        "Get ongoing updates on your node performance through Telegram, Discord and Slack.",
-    },
+    // {
+    //   title: "Address monitoring",
+    //   icon: "/feature-5.svg",
+    //   description:
+    //     "Monitor your masternode and staking rewards of any address from the available list of coins on our site.",
+    // },
+    // {
+    //   title: "Allnodes Bot",
+    //   icon: "/feature-6.svg",
+    //   description:
+    //     "Get ongoing updates on your node performance through Telegram, Discord and Slack.",
+    // },
   ]
 
   return (

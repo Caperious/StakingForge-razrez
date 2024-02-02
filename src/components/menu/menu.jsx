@@ -97,12 +97,22 @@ const DesktopMenu = ({ links }) => {
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext)
   return (
-    <div className={"flex-row gap-x-2 hidden lg:flex cursor-pointer z-10"}>
-      <button onClick={() => toggleTheme("light")}>
-        <img className={"dark:invert"} src={"/light.svg"} />
-      </button>
+    <div className={"flex-row gap-x-3 hidden lg:flex cursor-pointer z-10"}>
       <button onClick={() => toggleTheme("dark")}>
-        <img className={"dark:invert"} src={"/dark.svg"} />
+        <img
+          src={
+            theme === "dark" ? "/dark-theme-dark.svg" : "/light-theme-dark.svg"
+          }
+        />
+      </button>
+      <button onClick={() => toggleTheme("light")}>
+        <img
+          src={
+            theme === "dark"
+              ? "/dark-theme-light.svg"
+              : "/light-theme-light.svg"
+          }
+        />
       </button>
     </div>
   )

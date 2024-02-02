@@ -16,16 +16,16 @@ function App() {
         <Header />
         <HeroSection />
         <BlockchainsSection />
-        <div className={"my-4"}>
+        <div className={"mt-36"}>
           <Divider />
         </div>
         <FeaturesSection />
       </div>
-      <div className={"bg-neutral-100 dark:text-neutral-700"}>
-        <div className={"mx-auto container"}>
-          <NewsSection />
-        </div>
-      </div>
+      {/*<div className={"bg-neutral-100 dark:text-neutral-700"}>*/}
+      {/*  <div className={"mx-auto container"}>*/}
+      {/*    <NewsSection />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <div className={"hidden lg:flex bg-neutral-50 dark:bg-neutral-900"}>
         <SponsorsSection />
       </div>
