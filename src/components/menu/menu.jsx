@@ -33,7 +33,7 @@ export const Menu = () => {
           className={"relative z-20"}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <img src={"/menu.svg"} className="h-6 w-6" />
+          <img src={"/menu.svg"} className="h-6 w-6 dark:invert" />
         </div>
         {isMenuOpen && <MobileMenu links={links} />}
       </div>
@@ -46,7 +46,11 @@ export const Menu = () => {
 
 const MobileMenu = ({ links }) => {
   return (
-    <div className={"fixed left-0 top-0 z-10 h-full w-full bg-neutral-200"}>
+    <div
+      className={
+        "fixed left-0 top-0 z-10 h-full w-full bg-neutral-200 dark:bg-neutral-800"
+      }
+    >
       <div
         className={
           "flex h-full w-full flex-col items-center justify-center gap-y-4 bg-opacity-90"
@@ -95,10 +99,10 @@ const ThemeToggle = () => {
   return (
     <div className={"flex-row gap-x-2 hidden lg:flex cursor-pointer z-10"}>
       <button onClick={() => toggleTheme("light")}>
-        <img src={"/light.svg"} />
+        <img className={"dark:invert"} src={"/light.svg"} />
       </button>
       <button onClick={() => toggleTheme("dark")}>
-        <img src={"/dark.svg"} />
+        <img className={"dark:invert"} src={"/dark.svg"} />
       </button>
     </div>
   )
@@ -109,7 +113,9 @@ const AccountLinks = () => {
     <>
       <a href={"/sign-in"}>Sign in</a>
       <a
-        className={"border-2 rounded-full border-neutral-900 px-6 py-2"}
+        className={
+          "border-2 rounded-full border-neutral-900 dark:border-white px-6 py-2"
+        }
         href={"/sign-up"}
       >
         Sign up

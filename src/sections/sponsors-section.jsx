@@ -25,7 +25,7 @@ export const SponsorsSection = () => {
     <div className={"flex flex-row justify-between py-10 container mx-auto"}>
       {sponsors.map((el) => (
         <div>
-          <img src={el.logo} className={"h-8 filter-invert"} />
+          <img src={el.logo} className={"h-8 filter-invert dark:filter-none"} />
         </div>
       ))}
     </div>

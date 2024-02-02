@@ -25,7 +25,7 @@ export const BlockchainsSection = () => {
       card: "card-yellow",
     },
     {
-      image: "https://cryptologos.cc/logos/cronos-cro-logo.svg?v=029",
+      image: "/cronos.svg",
       name: "Cronos",
       description: "Staking, Validator Nodes",
       marketCap: "4.71B",
@@ -54,6 +54,16 @@ export const BlockchainsSection = () => {
       percentageColor: "text-[#71C9A5]",
       card: "card-red",
     },
+    {
+      image: "https://cryptologos.cc/logos/aave-aave-logo.svg?v=029",
+      name: "Aave AAVE",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "6.7-8%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-green",
+    },
   ]
 
   return (
@@ -61,7 +71,7 @@ export const BlockchainsSection = () => {
       <h2>Supported blockchains</h2>
       <p
         className={
-          "text-neutral-700 my-3 sm:text-lg text-sm max-w-52 sm:max-w-full mb-10 sm:mb-0"
+          "text-neutral-700 my-3 sm:text-lg text-sm max-w-52 sm:max-w-full mb-10 sm:mb-0 dark:text-white"
         }
       >
         Choose an asset to Stake, Host or Monitor to get started

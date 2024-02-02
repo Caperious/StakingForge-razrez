@@ -24,7 +24,7 @@ export const HeroSection = () => {
 
         <p
           className={
-            "mt-10 mb-4 sm:mb-10 text-lg text-gray-900 sm:max-w-lg lg:max-w-xl"
+            "mt-10 mb-4 sm:mb-10 text-lg text-gray-900 dark:text-white sm:max-w-lg lg:max-w-xl"
           }
         >
           {" "}

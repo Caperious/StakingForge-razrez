@@ -56,7 +56,7 @@ const Feaure = ({ feature: { title, icon, description } }) => {
   return (
     <div
       className={
-        "flex flex-col gap-y-2 text-neutral-700 text-center sm:items-center"
+        "flex flex-col gap-y-2 text-neutral-700 dark:text-white text-center sm:items-center"
       }
     >
       <img src={icon} className={"h-12 sm:h-24"} />

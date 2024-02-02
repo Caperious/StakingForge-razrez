@@ -10,7 +10,7 @@ export const BlockchainCard = ({ blockchain = {} }) => {
         </div>
         <div
           className={
-            "flex flex-col mx-2 flex-grow text-xs font-neutral-900 sm:items-center sm:mt-6 sm:text-lg"
+            "flex flex-col mx-2 flex-grow text-xs font-neutral-900 dark:text-neutral-100 sm:items-center sm:mt-6 sm:text-lg"
           }
         >
           {/*Title */}
