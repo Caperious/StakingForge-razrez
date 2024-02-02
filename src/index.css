@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: BioSans;
+    font-weight: 400;
+    src: url("/fonts/biosans-regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: BioSans;
+    font-weight: 800;
+    src: url("/fonts/biosans-bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: BioSans;
+    font-weight: 700;
+    src: url("/fonts/biosans-semibold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: BioSans;
+    font-weight: 300;
+    src: url("/fonts/biosans-light.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Termina;
+    font-weight: 700;
+    src: url("/fonts/termina-bold.otf") format("opentype");
+  }
+
+  h1 {
+    @apply font-termina text-[32px] font-bold sm:text-[48px] lg:text-[64px];
+    line-height: 1.1;
+  }
+  h2 {
+    @apply font-termina text-[24px] font-bold sm:text-[32px] lg:text-[40px];
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+  h3 {
+    @apply font-termina text-[20px] font-bold sm:text-[24px] lg:text-[32px];
+    line-height: 1.2;
+  }
+  h4 {
+    @apply font-termina text-[16px] font-bold sm:text-[20px] lg:text-[20px];
+    line-height: 1.4;
+  }
+  h5 {
+    @apply font-termina text-[14px] font-bold sm:text-[16px] lg:text-[16px];
+    line-height: 1.5;
+  }
+
+  * {
+    letter-spacing: -0.02em;
+  }
+
+  /* ... */
+}
+
+.gradient-tricolor {
+  /*@apply bg-gradient-to-tr from-primary-500 via-secondary-500 to-tertiary-500;*/
+  background-image: linear-gradient(
+    -65.1deg,
+    #e8858e 6.72104%,
+    #c260fe 59.5099%,
+    #5834ff 100%
+  );
+}
+
+.border-gradient-tricolor {
+  border-image-source: linear-gradient(
+    -65.1deg,
+    #e8858e 6.72104%,
+    #c260fe 59.5099%,
+    #5834ff 100%
+  );
+  border-image-slice: 1;
+}
+
+.gradient-primary-secondary {
+  @apply bg-gradient-to-tr from-primary-500 to-secondary-500;
+}
+
+.border-gradient-secondary {
+  /*background-clip: padding-box;*/
+  @apply relative;
+}
+
+.border-gradient-secondary::after {
+  @apply absolute inset-0 p-0.5 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500;
+  content: "";
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gradient-secondary-tertiary {
+  @apply bg-gradient-to-tr from-primary-500 to-secondary-500;
+}
+
+.card-red {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+  background: linear-gradient(
+      116deg,
+      rgba(232, 65, 66, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+  backdrop-filter: blur(50px);
+}
+
+.card-dark {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+  background: linear-gradient(
+      116deg,
+      rgba(255, 255, 255, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+  backdrop-filter: blur(50px);
+}
+
+.card-blue {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+  background: linear-gradient(
+      116deg,
+      rgba(0, 141, 228, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+  backdrop-filter: blur(50px);
+}
+
+.card-yellow {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+
+  background: linear-gradient(
+      116deg,
+      rgba(255, 213, 63, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+
+  backdrop-filter: blur(50px);
+}
+
+.card-purple {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+  background: linear-gradient(
+      116deg,
+      rgba(144, 50, 211, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+  backdrop-filter: blur(50px);
+}
+
+.card-green {
+  border-radius: 16px;
+  border: 1px solid rgba(119, 155, 155, 0.2);
+  background: linear-gradient(
+      116deg,
+      rgba(38, 214, 149, 0.05) 17.81%,
+      rgba(255, 255, 255, 0) 66.18%
+    ),
+    rgba(242, 243, 251, 0.9);
+  backdrop-filter: blur(50px);
+}
