@@ -23,7 +23,7 @@ export const Menu = () => {
 
   return (
     <div>
-      <div className={"relative"}>
+      <div className={"sm:hidden relative"}>
         <div
           className={"relative z-20"}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -55,13 +55,32 @@ const MobileMenu = ({ links }) => {
           )
         })}
 
-        <a href={"/sign-in"}>Sign in</a>
-        <a href={"/sign-up"}>Sign up</a>
+        <AccountLinks />
       </div>
     </div>
   )
 }
 
-const DesktopMenu = ({ links }) => {}
+const DesktopMenu = ({ links }) => {
+  return <AccountLinks />
+}
 
 const ThemeToggle = () => {}
+
+const AccountLinks = () => {
+  return (
+    <div
+      className={
+        "flex flex-row gap-x-8 align-baseline justify-center items-center font-bold"
+      }
+    >
+      <a href={"/sign-in"}>Sign in</a>
+      <a
+        className={"border-2 rounded-full border-neutral-900 px-6 py-2"}
+        href={"/sign-up"}
+      >
+        Sign up
+      </a>
+    </div>
+  )
+}

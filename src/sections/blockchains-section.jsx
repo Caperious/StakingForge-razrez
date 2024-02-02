@@ -1,5 +1,6 @@
 import { BlockchainCard } from "../components/blockchain-card"
 import { Button } from "../components/button"
+import { BlockchainFilters } from "../components/blockchain-filters"
 
 export const BlockchainsSection = () => {
   const blockchains = [
@@ -58,11 +59,25 @@ export const BlockchainsSection = () => {
   return (
     <div className="mt-10 px-6">
       <h2>Supported blockchains</h2>
-      <p className={"text-neutral-700 my-5"}>
+      <p
+        className={
+          "text-neutral-700 my-3 sm:text-lg text-sm max-w-52 sm:max-w-full mb-10 sm:mb-0"
+        }
+      >
         Choose an asset to Stake, Host or Monitor to get started
       </p>
 
-      <div className={"flex flex-col flex-wrap gap-y-3"}>
+      <div className={"hidden sm:flex mt-10 mb-6"}>
+        <BlockchainFilters />
+      </div>
+
+      <div className={"grid grid-cols-1 sm:grid-cols-3 gap-3"}>
+        {blockchains.map((blockchain) => (
+          <BlockchainCard blockchain={blockchain} />
+        ))}
+        {blockchains.map((blockchain) => (
+          <BlockchainCard blockchain={blockchain} />
+        ))}
         {blockchains.map((blockchain) => (
           <BlockchainCard blockchain={blockchain} />
         ))}

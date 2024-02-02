@@ -4,7 +4,7 @@ import { Button } from "../components/button"
 export const HeroSection = () => {
   return (
     <>
-      <div className={"px-6 pt-20"}>
+      <div className={"px-6 pt-16 sm:pt-20"}>
         <h1 className={"sm:hidden"}>
           The{" "}
           <span className={"gradient-tricolor bg-clip-text text-transparent"}>
@@ -22,7 +22,7 @@ export const HeroSection = () => {
           </h1>
         </h1>
 
-        <p className={"mt-10 mb-4 text-lg text-gray-900"}>
+        <p className={"mt-10 mb-4 sm:mb-10 text-lg text-gray-900 sm:max-w-lg"}>
           {" "}
           With Staking Forge, you can earn rewards just by holding coins in your
           wallet.{" "}
@@ -32,13 +32,13 @@ export const HeroSection = () => {
           </span>
         </p>
 
-        <Button label={"Discover Blockchains"}>Discover blockchains</Button>
+        <Button label={"Discover blockchains"}></Button>
       </div>
-      <div className={"w-full relative"}>
+      <div className={"w-full relative sm:-mt-24"}>
         <img
           src={"/hero-graphics.svg"}
           className={
-            "w-full object-cover md:w-2/3  right-0 -top-[150px] md:-top-[200px] lg:-top-[200px] z-0"
+            "w-full object-cover -top-[150px] sm:-top-[200px] lg:-top-[200px] z-0"
           }
         />
       </div>

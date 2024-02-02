@@ -22,14 +22,17 @@ export const NewsSection = () => {
   return (
     <div className={"bg-neutral-100 py-6"}>
       <div className={" flex flex-col mx-8 "}>
-        <h2 className={"text-center my-16"}> StakingForge News</h2>
+        <h2 className={"text-center my-16 sm:text-4xl sm:mt-24"}>
+          {" "}
+          StakingForge News
+        </h2>
         <div>
           {news.map((el) => {
             return <NewsCard news={el} key={el.description} />
           })}
         </div>
       </div>
-      <div className={"flex justify-center my-6"}>
+      <div className={"flex justify-center my-6 sm:mt-12"}>
         <Button label={"Show more"} />
       </div>
     </div>
@@ -39,12 +42,18 @@ export const NewsSection = () => {
 const NewsCard = ({ news }) => {
   return (
     <>
-      <div className={"my-8"}>
+      <div className={"my-8 sm:flex flex-row gap-x-6"}>
         <div
-          className={"bg-neutral-300 rounded-2xl h-56 w-full mt-8 mb-10"}
+          className={
+            "bg-neutral-300 rounded-2xl h-48 w-full mt-8 mb-10 sm:mt-0"
+          }
         ></div>
-        <div className={"font-bold font-termina my-2"}>{news.title}</div>
-        <p>{news.description}</p>
+        <div className={"sm:max-w-sm"}>
+          <div className={"font-bold font-termina my-2 sm:text-xl"}>
+            {news.title}
+          </div>
+          <p>{news.description}</p>
+        </div>
       </div>
       <hr className={"bg-neutral-300 h-[2px]"} />
     </>

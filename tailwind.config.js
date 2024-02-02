@@ -11,10 +11,11 @@ export default {
       sans: ["BioSans", "sans-serif"],
       termina: ["Termina"],
     },
-    letterSpacing: {
-      10: "0.1em",
-    },
     extend: {
+      letterSpacing: {
+        10: "0.1em",
+        20: "0.2em",
+      },
       colors: {
         danger: "#e25a71",
         success: "#5AE278",
