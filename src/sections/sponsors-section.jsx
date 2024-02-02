@@ -6,19 +6,19 @@ export const SponsorsSection = () => {
     },
     {
       name: "Telegram",
-      logo: "telegram.svg",
+      logo: "/telegram.svg",
     },
     {
       name: "LinkedIn",
-      logo: "linkedin.svg",
+      logo: "/linkedin.svg",
     },
     {
       name: "Twitter",
-      logo: "twitter.svg",
+      logo: "/twitter.svg",
     },
     {
       name: "Facebook",
-      logo: "facebook.svg",
+      logo: "/facebook.svg",
     },
   ]
   return (
