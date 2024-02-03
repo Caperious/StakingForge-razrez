@@ -12,7 +12,9 @@ import { Footer } from "./sections/footer"
 function App() {
   return (
     <>
-      <div className={`mx-auto container`}>
+      <div className={"elipse-104"}></div>
+      <div className={"elipse-102"}></div>
+      <div className={`mx-auto container relative`}>
         <Header />
         <HeroSection />
         <BlockchainsSection />
@@ -32,6 +34,7 @@ function App() {
       <div className={"mx-auto container hidden lg:block"}>
         <Footer />
       </div>
+      <div className={"elipse-103"}></div>
     </>
   )
 }

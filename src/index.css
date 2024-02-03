@@ -54,11 +54,43 @@
     line-height: 1.5;
   }
 
-  * {
-    /*letter-spacing: -0.02em;*/
+
+  .elipse-104 {
+    /* Ellipse 104 */
+
+    position: absolute;
+    width: 50%;
+    height: 1084px;
+    right: 0;
+    top: -25%;
+    /* Secondary/500 */
+    background: #c260fe;
+    opacity: 0.15;
+    filter: blur(400px);
   }
 
-  /* ... */
+  .elipse-102 {
+    /* Ellipse 101 */
+
+    position: absolute;
+    width: 1513px;
+    height: 1084px;
+    left: calc(50% - 1513px/2 - 741.5px);
+    top: 480px;
+
+    /* Base/White */
+    background: #FFFFFF;
+    opacity: 0.8;
+    filter: blur(400px);
+
+  }
+
+  html.dark .elipse-102 {
+    /* Primary/500 */
+    background: #5834FF;
+    opacity: 0.15;
+    filter: blur(400px);
+  }
 
   .gradient-tricolor {
     /*@apply bg-gradient-to-tr from-primary-500 via-secondary-500 to-tertiary-500;*/
@@ -237,11 +269,11 @@
     border: 1px solid rgba(255, 184, 0, 0.8);
 
     background: linear-gradient(
-            116deg,
-            rgba(255, 184, 0, 0.25) 13.81%,
-            rgba(10, 12, 22, 0) 66.18%
-    ),
-    rgba(10, 12, 23, 0.9);
+        116deg,
+        rgba(255, 184, 0, 0.25) 13.81%,
+        rgba(10, 12, 22, 0) 66.18%
+      ),
+      rgba(10, 12, 23, 0.9);
 
     backdrop-filter: blur(50px);
   }
@@ -383,6 +415,7 @@
     }
 
     html.dark .card-red {
+      border-radius: 24px;
       border: 1px solid rgba(119, 122, 155, 0.2);
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
