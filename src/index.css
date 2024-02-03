@@ -60,29 +60,27 @@
 
     position: absolute;
     width: 50%;
-    height: 1084px;
+    height: 50%;
     right: 0;
     top: -25%;
     /* Secondary/500 */
     background: #c260fe;
     opacity: 0.15;
-    filter: blur(400px);
+    filter: blur(100px);
   }
 
   .elipse-102 {
     /* Ellipse 101 */
-
     position: absolute;
-    width: 1513px;
-    height: 1084px;
-    left: calc(50% - 1513px/2 - 741.5px);
-    top: 480px;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 50%;
 
     /* Base/White */
     background: #FFFFFF;
     opacity: 0.8;
-    filter: blur(400px);
-
+    filter: blur(100px);
   }
 
   html.dark .elipse-102 {
@@ -486,6 +484,26 @@
         ),
         rgba(31, 25, 14, 0.9);
       backdrop-filter: blur(50px);
+    }
+
+
+    .elipse-104 {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      right: 0;
+      top: -25%;
+      filter: blur(400px);
+    }
+
+    .elipse-102 {
+      /* Ellipse 101 */
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      left: 0;
+      top: 55%;
+      filter: blur(400px);
     }
   }
 
