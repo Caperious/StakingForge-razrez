@@ -5,52 +5,122 @@ import { BlockchainFilters } from "../components/blockchain-filters"
 export const BlockchainsSection = () => {
   const blockchains = [
     {
-      image: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029",
-      name: "Avalanche",
+      image: "/midasx.svg",
+      name: "MidasX Ouro",
       description: "Staking, Validator Nodes",
       marketCap: "4.71B",
       stakingType: "APR",
-      percentageLabel: "16%",
+      percentageLabel: "74 - 100%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-gold",
+    },
+    {
+      image: "/multiverse.svg",
+      name: "MultiverseX eGLD",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "8.5%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-green",
+    },
+    {
+      image: "/spx.svg",
+      name: "Solar SPX",
+      description: "Staking",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "?",
       percentageColor: "text-[#71C9A5]",
       card: "card-red",
     },
     {
-      image: "https://coinando.com/static/assets/coins/terra-luna-logo.png",
-      name: "Terra Classic",
-      description: "Staking",
-      marketCap: "4.71B",
-      stakingType: "APR",
-      percentageLabel: "5%",
-      percentageColor: "text-[#71C9A5]",
-      card: "card-yellow",
-    },
-    {
-      image: "/cronos.svg",
-      name: "Cronos",
+      image: "/ethereum.png",
+      name: "Ethereum ETH",
       description: "Staking, Validator Nodes",
       marketCap: "4.71B",
       stakingType: "APR",
-      percentageLabel: "3-4%",
+      percentageLabel: "3.2%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-blue",
+    },
+    {
+      image: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029",
+      name: "Avalanche AVAX",
+      description: "Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "6.25%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-red",
+    },
+    {
+      image: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=029",
+      name: "Solana SOL",
+      description: "Staking",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "7.10%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-purple",
+    },
+    {
+      image: "/celestia.png",
+      name: "Celestia TIA",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "15.2%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-purple",
+    },
+    {
+      image: "https://cryptologos.cc/logos/dydx-dydx-logo.svg?v=029",
+      name: "dYdx DYDX",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "15%",
       percentageColor: "text-[#71C9A5]",
       card: "card-dark",
     },
     {
-      image: "https://cryptologos.cc/logos/dash-dash-logo.svg?v=029",
-      name: "Dash",
-      description: "Validator Nodes",
+      image: "https://cryptologos.cc/logos/injective-inj-logo.svg?v=029",
+      name: "Injective INJ",
+      description: "Staking, Validator Nodes",
       marketCap: "4.71B",
       stakingType: "APR",
-      percentageLabel: "8-12%",
+      percentageLabel: "14.5%",
       percentageColor: "text-[#71C9A5]",
       card: "card-blue",
     },
     {
       image: "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=029",
-      name: "Polkadot",
-      description: "Staking",
+      name: "Polkadot DOT",
+      description: "Staking, Validator Nodes",
       marketCap: "4.71B",
       stakingType: "APR",
-      percentageLabel: "3%",
+      percentageLabel: "15.25%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-red",
+    },
+    {
+      image: "https://cryptologos.cc/logos/cosmos-atom-logo.svg?v=029",
+      name: "Cosmos ATOM",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "13.5%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-dark",
+    },
+    {
+      image: "https://cryptologos.cc/logos/kava-kava-logo.svg?v=029",
+      name: "Kava KAVA",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "19.00%",
       percentageColor: "text-[#71C9A5]",
       card: "card-red",
     },
@@ -60,9 +130,19 @@ export const BlockchainsSection = () => {
       description: "Staking, Validator Nodes",
       marketCap: "4.71B",
       stakingType: "APR",
-      percentageLabel: "6.7-8%",
+      percentageLabel: "4.82%",
       percentageColor: "text-[#71C9A5]",
       card: "card-green",
+    },
+    {
+      image: "/bake.png",
+      name: "Bake. BAKE",
+      description: "Staking, Validator Nodes",
+      marketCap: "4.71B",
+      stakingType: "APR",
+      percentageLabel: "20%",
+      percentageColor: "text-[#71C9A5]",
+      card: "card-yellow",
     },
   ]
 
@@ -83,15 +163,9 @@ export const BlockchainsSection = () => {
 
       <div
         className={
-          "grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-3 xl:gap-5 mt-8"
+          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 gap-3 lg:gap-4 2xl:gap-8 mt-8"
         }
       >
-        {blockchains.map((blockchain) => (
-          <BlockchainCard blockchain={blockchain} />
-        ))}
-        {blockchains.map((blockchain) => (
-          <BlockchainCard blockchain={blockchain} />
-        ))}
         {blockchains.map((blockchain) => (
           <BlockchainCard blockchain={blockchain} />
         ))}

@@ -104,6 +104,8 @@
     @apply bg-gradient-to-tr from-primary-500 to-secondary-500;
   }
 
+
+
   .card-red {
     border-radius: 16px;
     border: 1px solid rgba(119, 155, 155, 0.2);
@@ -401,6 +403,13 @@
         ),
         rgba(10, 12, 23, 0.9);
       backdrop-filter: blur(100%);
+    }
+
+    html.dark .card-gold {
+      border-radius: 24px;
+      border: 2px solid rgba(255, 184, 0, 0.30);
+      background: radial-gradient(54.54% 61.61% at 50% 23.04%, rgba(255, 168, 0, 0.30) 0%, rgba(19, 21, 31, 0.00) 100%), rgba(31, 25, 14, 0.90);
+      backdrop-filter: blur(50px);
     }
   }
 
