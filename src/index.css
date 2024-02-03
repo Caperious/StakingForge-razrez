@@ -490,8 +490,8 @@
     .elipse-104 {
       position: absolute;
       width: 50%;
-      height: 100%;
-      right: 0;
+      height: 50%;
+      right: -2%;
       top: -25%;
       filter: blur(400px);
     }
@@ -500,10 +500,10 @@
       /* Ellipse 101 */
       position: absolute;
       width: 50%;
-      height: 100%;
-      left: 0;
-      top: 55%;
-      filter: blur(400px);
+      height: 50%;
+      left: -25%;
+      top: 50%;
+      filter: blur(300px);
     }
   }
 
