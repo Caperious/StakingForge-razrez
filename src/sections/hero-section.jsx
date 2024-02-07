@@ -48,19 +48,19 @@ export const HeroSection = () => {
       </div>
       <div
         className={
-          "w-full relative sm:-mt-24 lg:justify-end lg:items-center lg:flex object-fill"
+          "w-full relative sm:-mt-24 lg:justify-end lg:items-center lg:flex object-fill pointer-events-none select-none -z-10"
         }
       >
         <img
-          src={"/hero-graphics-desktop.svg"}
+          src={"/hero-graphics-desktop-dark.svg"}
           className={
-            "hidden lg:block w-full md:-mt-[50px] lg:-mt-[125px] lg:-mb-[75px] xl:-mt-[300px] xl:-mb-[100px] 2xl:-mt-[400px] 2xl:-mb-[150px] "
+            "hidden lg:block w-full md:-mt-[50px] lg:-mt-[125px] lg:-mb-[75px] xl:-mt-[300px] xl:-mb-[100px] 2xl:-mt-[400px] 2xl:-mb-[150px] pointer-events-none -z-10"
           }
         />
         <img
           src={"/hero-graphics.svg"}
           className={
-            "w-full md:-mt-[200px] md:-mb-[200px] -mt-[110px] -mb-[110px] lg:hidden"
+            "w-full md:-mt-[200px] md:-mb-[200px] -mt-[110px] -mb-[110px] lg:hidden -z-10 pointer-events-none"
           }
         />
       </div>

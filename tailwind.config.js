@@ -3,6 +3,22 @@ export default {
   content: ["./src/**/**/*.{html,jsx,tsx}", "./index.html"],
   darkMode: "class",
   theme: {
+    screens: {
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1680px",
+      // => @media (min-width: 1536px) { ... }
+    },
     fontFamily: {
       sans: ["BioSans", "sans-serif"],
       termina: ["Termina"],
@@ -11,6 +27,12 @@ export default {
       letterSpacing: {
         10: "0.1em",
         20: "0.2em",
+      },
+      backgroundImage: {
+        "primary-secondary":
+          "linear-gradient(225deg, #5834FF 9.35%, #C260FE 88.41%)",
+        "primary-secondary-dark":
+          "linear-gradient(225deg, #4929DC 9.35%, #A247DB 88.41%)",
       },
       colors: {
         danger: "#e25a71",

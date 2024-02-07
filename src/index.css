@@ -54,7 +54,6 @@
     line-height: 1.5;
   }
 
-
   .elipse-104 {
     /* Ellipse 104 */
 
@@ -78,14 +77,14 @@
     top: 50%;
 
     /* Base/White */
-    background: #FFFFFF;
+    background: #ffffff;
     opacity: 0.8;
     filter: blur(100px);
   }
 
   html.dark .elipse-102 {
     /* Primary/500 */
-    background: #5834FF;
+    background: #5834ff;
     opacity: 0.15;
     filter: blur(400px);
   }
@@ -114,9 +113,26 @@
     @apply bg-gradient-to-tr from-primary-500 to-secondary-500;
   }
 
-  .border-gradient-secondary {
+  .gradient-primary-secondary-dark {
+    background: linear-gradient(225deg, #4929dc 9.35%, #a247db 88.41%);
+  }
+
+  .border-gradient-secondary, .border-gradient-primary-secondary {
     /*background-clip: padding-box;*/
     @apply relative;
+  }
+
+
+  .border-gradient-primary-secondary::after {
+    /*linear-gradient(225deg, #5834FF 9.35%, #C260FE 88.41%);*/
+    @apply absolute inset-0 p-0.5 rounded-full bg-primary-secondary;
+    content: "";
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
   .border-gradient-secondary::after {
@@ -134,58 +150,55 @@
     @apply bg-gradient-to-tr from-primary-500 to-secondary-500;
   }
 
-  .card-red {
+  .card-common-properties {
     border-radius: 16px;
     border: 1px solid rgba(119, 155, 155, 0.2);
+    backdrop-filter: blur(50px);
+    width: 100%;
+  }
+
+  .card-red {
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(232, 65, 66, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   .card-dark {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(255, 255, 255, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   .card-blue {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(0, 141, 228, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   .card-yellow {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(255, 213, 63, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
   .card-gold {
-    border-radius: 16px;
+    @apply card-common-properties;
     border: 1px solid rgba(255, 184, 0, 0.8);
 
     background: linear-gradient(
@@ -194,133 +207,104 @@
         rgba(255, 253, 246, 0.9) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
   .card-purple {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(144, 50, 211, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   .card-green {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(38, 214, 149, 0.05) 17.81%,
         rgba(255, 255, 255, 0) 66.18%
       ),
       rgba(242, 243, 251, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   html.dark .card-yellow {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(255, 213, 63, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-    backdrop-filter: blur(50px);
   }
 
   html.dark .card-red {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(232, 65, 66, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
   html.dark .card-blue {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
     background: linear-gradient(
         116deg,
         rgba(0, 141, 228, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
   html.dark .card-gold {
-    border-radius: 16px;
+    @apply card-common-properties;
     border: 1px solid rgba(255, 184, 0, 0.8);
-
     background: linear-gradient(
         116deg,
         rgba(255, 184, 0, 0.25) 13.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
   html.dark .card-dark {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(255, 255, 255, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
   html.dark .card-purple {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(144, 50, 211, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
   html.dark .card-green {
-    border-radius: 16px;
-    border: 1px solid rgba(119, 155, 155, 0.2);
-
+    @apply card-common-properties;
     background: linear-gradient(
         116deg,
         rgba(38, 214, 149, 0.1) 17.81%,
         rgba(10, 12, 22, 0) 66.18%
       ),
       rgba(10, 12, 23, 0.9);
-
-    backdrop-filter: blur(50px);
   }
 
-  @media (min-width: 640px) {
-    .card-red {
+  @media (min-width: 768px) {
+
+    .card-common-properties {
       border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      width: 226px;
+    }
+    .card-red {
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(232, 65, 66, 0.05) 0%,
@@ -330,9 +314,8 @@
     }
 
     .card-gold {
-      border-radius: 24px;
+      @apply card-common-properties;
       border: 1px solid rgba(255, 184, 0, 0.8);
-      backdrop-filter: blur(50px);
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(255, 184, 0, 0.2) 0%,
@@ -342,9 +325,7 @@
     }
 
     .card-dark {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(255, 255, 255, 0.05) 0%,
@@ -354,9 +335,7 @@
     }
 
     .card-blue {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(0, 141, 228, 0.05) 0%,
@@ -366,9 +345,7 @@
     }
 
     .card-yellow {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(255, 213, 63, 0.05) 0%,
@@ -378,9 +355,7 @@
     }
 
     .card-purple {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(144, 50, 211, 0.05) 0%,
@@ -390,9 +365,7 @@
     }
 
     .card-green {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-      backdrop-filter: blur(50px);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(38, 214, 149, 0.05) 0%,
@@ -402,14 +375,13 @@
     }
 
     html.dark .card-yellow {
-      border: 1px solid rgba(119, 122, 155, 0.2);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(255, 197, 110, 0.1) 0%,
           rgba(19, 21, 31, 0) 100%
         ),
         rgba(10, 12, 23, 0.9);
-      backdrop-filter: blur(50px);
     }
 
     html.dark .card-red {
@@ -437,55 +409,41 @@
     }
 
     html.dark .card-dark {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(105, 112, 255, 0.1) 0%,
           rgba(19, 21, 31, 0) 100%
         ),
         rgba(10, 12, 23, 0.9);
-
-      backdrop-filter: blur(50px);
     }
     html.dark .card-purple {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
-
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(157, 95, 255, 0.1) 0%,
           rgba(19, 21, 31, 0) 100%
         ),
         rgba(10, 12, 23, 0.9);
-
-      backdrop-filter: blur(50px);
     }
     html.dark .card-green {
-      border-radius: 24px;
-      border: 1px solid rgba(119, 122, 155, 0.2);
+      @apply card-common-properties;
       background: radial-gradient(
           84.54% 71.61% at 50% 23.04%,
           rgba(35, 247, 221, 0.1) 0%,
           rgba(19, 21, 31, 0) 100%
         ),
         rgba(10, 12, 23, 0.9);
-      backdrop-filter: blur(100%);
     }
 
     html.dark .card-gold {
-      border-radius: 24px;
-      border: 2px solid rgba(255, 184, 0, 0.3);
       background: radial-gradient(
           54.54% 61.61% at 50% 23.04%,
           rgba(255, 168, 0, 0.3) 0%,
           rgba(19, 21, 31, 0) 100%
         ),
         rgba(31, 25, 14, 0.9);
-      backdrop-filter: blur(50px);
     }
-
 
     .elipse-104 {
       position: absolute;
@@ -505,6 +463,13 @@
       top: 50%;
       filter: blur(300px);
     }
+  }
+
+  @media (min-width: 960px) {
+
+    /*.card-common-properties {*/
+    /*  width: 258px;*/
+    /*}*/
   }
 
   .filter-invert {

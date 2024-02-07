@@ -161,11 +161,7 @@ export const BlockchainsSection = () => {
       {/*  <BlockchainFilters />*/}
       {/*</div>*/}
 
-      <div
-        className={
-          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5 gap-3 lg:gap-4 2xl:gap-8 mt-8"
-        }
-      >
+      <div className={"flex flex-wrap gap-3 mt-8 justify-center"}>
         {blockchains.map((blockchain) => (
           <BlockchainCard blockchain={blockchain} />
         ))}
