@@ -7,13 +7,12 @@ export const Footer = () => {
         <div className={"flex flex-col gap-y-6 justify-start items-start"}>
           <Logo />
           <p className={"max-w-sm"}>
-            Funding freemium long tail hypotheses first mover advantage assets
-            ownership
+          StakingForge -  guides you in your investments in crypto assets. Take part in this new revolution.
           </p>
 
           <div className={"flex flex-row gap-x-4"}>
             <img src={"/email.svg"} />
-            <a href={"mailto:agensi@mail.com"}>agensi@mail.com</a>
+            <a href={"mailto:kubera@stakingforge.io"}>kubera@stakingforge.io</a>
           </div>
           <div className={"flex flex-row gap-x-4"}>
             <img src={"/phone.svg"} />
@@ -65,7 +64,7 @@ export const Footer = () => {
 
       <hr className={"border-neutral-800 my-10 "} />
       <div className={"flex flex-row justify-center my-10"}>
-        © StakeForge 2023. All right reserved
+        © StakingForge 2024. All right reserved
       </div>
     </div>
   )
