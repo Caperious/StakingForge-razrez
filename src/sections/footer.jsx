@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className={"flex flex-col gap-y-6 justify-start items-start"}>
           <Logo />
           <p className={"max-w-sm"}>
-          StakingForge -  guides you in your investments in crypto assets. Take part in this new revolution.
+          StakingForge - guides you in your investments in crypto assets. Take part in this new revolution.
           </p>
 
           <div className={"flex flex-row gap-x-4"}>
@@ -20,7 +20,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <div className={"font-bold tracking-10 text-lg mb-6"}>Services</div>
           <div className={"flex flex-col gap-y-4 tracking-wide"}>
             <a href={"#"}>Webhosting</a>
@@ -59,7 +59,7 @@ export const Footer = () => {
             <a href={"#"}>Privacy</a>
             <a href={"#"}>Terms</a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <hr className={"border-neutral-800 my-10 "} />
