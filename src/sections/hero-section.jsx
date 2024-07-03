@@ -27,13 +27,8 @@ export const HeroSection = () => {
             "mt-10 mb-4 sm:mb-10 text-lg text-gray-900 dark:text-white sm:max-w-lg lg:max-w-xl"
           }
         >
-          {" "}
-          With Staking Forge, you can earn rewards just by holding coins in your
-          wallet.{" "}
-          <span className={"hidden sm:inline"}>
-            Our project makes it easy to get started with staking, with a simple
-            and secure platform
-          </span>
+          With Staking Forge, you can earn crypto and invest in Gold directly from your wallet in a few clicks.
+          Our project makes it easy to get started with staking, with a simple and secure platform.
         </p>
 
         <div className={"lg:hidden"}>
