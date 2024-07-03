@@ -4,7 +4,7 @@ export const MobileApproxAPRComponent = ({ percentageColor, percentageLabel }) =
       <p
         className={`font-bold text-sm ${percentageColor}`}
         dangerouslySetInnerHTML={
-          !percentageLabel ? { __html: "N/A" } : { __html: percentageLabel }
+          !percentageLabel ? { __html: "TBD" } : { __html: percentageLabel }
         }
       ></p>
       <p

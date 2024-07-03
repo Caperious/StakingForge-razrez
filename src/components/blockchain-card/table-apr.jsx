@@ -21,7 +21,7 @@ export const TableAPRComponent = ({ marketCap, percentageColor, percentageLabel 
         <p
           className={`font-bold ${percentageColor}`}
           dangerouslySetInnerHTML={
-            !percentageLabel ? { __html: "N/A" } : { __html: percentageLabel }
+            !percentageLabel ? { __html: "TBD" } : { __html: percentageLabel }
           }
         ></p>
         <p className={"text-xs text-neutral-500 dark:text-[#858D9D]"}>
