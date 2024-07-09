@@ -38,7 +38,7 @@ export const BlockchainsSection = () => {
       category: "Layer 1",
     },
     {
-      image: "https://pbs.twimg.com/profile_images/1660782439340576768/9rIZjmMt_400x400.jpg",
+      image: "https://shardeum.org/wp-content/themes/shardeum/img/global/icon-shardeum.svg",
       name: "Shardeum SHM",
       description: "Staking, Validator Nodes",
       marketCap: "2M",
